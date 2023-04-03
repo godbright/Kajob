@@ -8,7 +8,7 @@ import { getAllServices } from "@/redux/reducers/servicesSlice";
 const Trending = () => {
   const dispatch = useDispatch();
   const services_data = useSelector((state) => state.services);
-  console.log(services_data, "serviced daa");
+
   const [loading, SetLoading] = useState(false);
   const [error, setError] = useState(null);
 

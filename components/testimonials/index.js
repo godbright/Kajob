@@ -38,10 +38,12 @@ const Testimonials = () => {
       <div className=" my-40 flex flex-col justify-center h-4/5 items-center   w-screen  ">
         <div className=" relative w-4/6  shadow-md  shadow-gray-200 bg-slate-100 ">
           <div className="  hidden sm:block  absolute top-0 left-10  ">
-            <img src="/comma.png" width={100} height={100} />
+            <img src="/comma.png" width={100} height={100}
+                 alt ={"services"} />
           </div>
           <div className=" hidden sm:block absolute bottom-0 right-10   ">
-            <img src="/b_comma.png" width={100} height={100} />
+            <img src="/b_comma.png" width={100} height={100}
+                 alt ={"services"} />
           </div>
           <div className="  font-bold p-2   text-center pt-4 text-2xl">
             What our users Say

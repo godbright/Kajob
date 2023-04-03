@@ -62,6 +62,7 @@ const ServiceComponent = (props) => {
                 <img
                   src={service.image[0]}
                   className={"  object-cover  w-auto h-auto   "}
+                  alt={"services"}
                 />
               </div>
               <div className=" p-4">
@@ -87,6 +88,7 @@ const ServiceComponent = (props) => {
                       className={
                         " rounded-full bg-gray-100   object-cover w-10  h-10"
                       }
+                      alt={"services"}
                     />
                     <p>Godbright Uiso</p>
                   </div>

@@ -57,7 +57,7 @@ const Categories = () => {
                     className=" flex flex-col items-center  mt-2 p-8 hover:shadow-lg    hover:shadow-gray-100"
                   >
                     <div className="h-8/12 w-14 py-4">
-                      <img src={cat.image} height={"auto"} width={"auto"} />
+                      <img src={cat.image} height={"auto"} width={"auto"}       alt ={"services"}/>
                     </div>
                     <p className="md:text-2xl md:font-medium  text-center  text-sm ">
                       {cat.title}

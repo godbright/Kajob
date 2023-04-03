@@ -6,6 +6,7 @@ const Commercials = () => {
           <img
             src="/shule.jpg"
             className={"  bg-gray-100   object-cover w-auto h-auto"}
+            alt ={"services"}
           />
         </div>
       </div>

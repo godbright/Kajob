@@ -53,54 +53,52 @@ const ServiceComponent = (props) => {
       >
         {props.data.length &&
           props.data.map((service, index) => (
-            <Link href={`/${service._id}`}>
-              <div
-                key={index}
-                className="flex   flex-col w-12/12 md:gap-4 gap-2 my-6 mx-4 md:mt-6  shadow-lg shadow-gray-200 "
-              >
-                <div className="w-auto">
-                  {/* {"change to carousel of  pictures "} */}
-                  <img
-                    src={service.image[0]}
-                    className={"  object-cover  w-auto h-auto   "}
-                  />
+            <div
+              key={index}
+              className="flex   flex-col w-12/12 md:gap-4 gap-2 my-6 mx-4 md:mt-6  shadow-lg shadow-gray-200 "
+            >
+              <div className="w-auto">
+                {/* {"change to carousel of  pictures "} */}
+                <img
+                  src={service.image[0]}
+                  className={"  object-cover  w-auto h-auto   "}
+                />
+              </div>
+              <div className=" p-4">
+                <div className="my-4">
+                  <p className="text-gray-400 ">{service.category}</p>
                 </div>
-                <div className=" p-4">
-                  <div className="my-4">
-                    <p className="text-gray-400 ">{service.category}</p>
+                <div>
+                  <p className="text-black font-bold  flex flex-wrap">
+                    {service.description.slice(0, 50).concat("....")}
+                  </p>
+                </div>
+                <div className="flex gap-2 items-center py-1">
+                  <AiFillStar color="orange" />
+                  <p>
+                    <span>{service.totalStars}</span> Review
+                  </p>
+                </div>
+                <div className="border-t flex gap-4 mt-4 justify-between items-center py-4  px-2">
+                  <div className="flex items-center justify-center gap-3 ">
+                    {/* {"change to profile picture of the person who gave the gig"} */}
+                    <img
+                      src={service.image[0]}
+                      className={
+                        " rounded-full bg-gray-100   object-cover w-10  h-10"
+                      }
+                    />
+                    <p>Godbright Uiso</p>
                   </div>
-                  <div>
-                    <p className="text-black font-bold  flex flex-wrap">
-                      {service.description.slice(0, 50).concat("....")}
-                    </p>
-                  </div>
-                  <div className="flex gap-2 items-center py-1">
-                    <AiFillStar color="orange" />
-                    <p>
-                      <span>{service.totalStars}</span> Review
-                    </p>
-                  </div>
-                  <div className="border-t flex gap-4 mt-4 justify-between items-center py-4  px-2">
-                    <div className="flex items-center justify-center gap-3 ">
-                      {/* {"change to profile picture of the person who gave the gig"} */}
-                      <img
-                        src={service.image[0]}
-                        className={
-                          " rounded-full bg-gray-100   object-cover w-10  h-10"
-                        }
-                      />
-                      <p>Godbright Uiso</p>
-                    </div>
-                    <p className="text-black font-bold ">
-                      <span className="text-gray-400 font-light">
-                        Starting at :
-                      </span>{" "}
-                      {`${service.price} Tsh`}
-                    </p>
-                  </div>
+                  <p className="text-black font-bold ">
+                    <span className="text-gray-400 font-light">
+                      Starting at :
+                    </span>{" "}
+                    {`${service.price} Tsh`}
+                  </p>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
       </Carousel>
     </>

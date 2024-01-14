@@ -40,7 +40,7 @@ const Commercials = () => {
           <div
             className=" rounded-sm mt-4 bg-green-400 p-2  w-auto max-w-sm  "
             onClick={() => {
-              console.log("clicked");
+
             }}
           >
             <p className=" text-white   text-center text-lg p-2"> Get a job</p>

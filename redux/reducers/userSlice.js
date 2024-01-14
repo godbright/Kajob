@@ -3,14 +3,18 @@ const { createSlice } = require("@reduxjs/toolkit");
 //exported slice
 export const UserSlice = createSlice({
   name: "userSlice",
-  initialState: {},
+  initialState: {
+    user: null,
+  },
   reducers: {
-    getusers: (state, action) => {},
+    getuserInfo: (state, action) => {
+      state.user = action.payload;
+    },
   },
 });
 
 //export actions
-export const { getUsers } = UserSlice.actions;
+export const { getuserInfo } = UserSlice.actions;
 
 // export reducer
 

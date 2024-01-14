@@ -20,10 +20,7 @@ const WorKWith = () => {
     },
   ];
   return (
-    <div>
-      <div className=" bg-slate-50 pb-6">
-        <p className="text-lg  text-center">Trusted with & Worked with</p>
-      </div>
+    <div className="mt-6">
       <SingleImageCarousel data={worked} />
     </div>
   );

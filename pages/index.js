@@ -8,28 +8,29 @@ import Stats from "@/components/stats";
 import Testimonials from "@/components/testimonials";
 import Commercials from "@/components/commercials";
 import WorKWith from "@/components/work_with/WorkWith";
-import store from "@/redux/store/store";
+import { useScroll } from "@react-hooks-library/core";
 import { Provider } from "react-redux";
+import { useEffect, useRef } from "react";
+import Job from "@/components/job/job";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <Provider store={store}>
-      <div>
-        <Head>
-          <title>Ka Job </title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Landing />
-        <WorKWith />
-        <Categories />
-        <Trending />
-        <Stats />
-        <Commercials />
+    <div>
+      <Head>
+        <title>Ka Job </title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Landing />
+      <Categories />
+      <Job />
+      <Trending />
+      <Stats />
+      <Commercials />
+      <WorKWith />
 
-        <Testimonials />
-      </div>
-    </Provider>
+      {/* <Testimonials /> */}
+    </div>
   );
 }

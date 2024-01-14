@@ -11,6 +11,7 @@ const Categories = () => {
   const categories_data = useSelector((state) => state.categories);
   const [loading, isLoading] = useState(false);
   const [error, isError] = useState(null);
+  
   // getAllCategories
   const getCategories = async () => {
     try {
@@ -41,28 +42,34 @@ const Categories = () => {
       <div>
         {loading && <p className="text-red-100">Loading data</p>}
         <Heading
-          title={" Browse Jobs categories"}
-          description={"We offer a pull of many jobs"}
+          title={" Browse categories"}
+          description={"We offer a pull of many services"}
           link={"All categories"}
         />
 
-        <div className="mt-4 2xl:w-4/6  2xl:ml-80  px-12 md:px-16 ">
-          <div className="grid  grid-cols-2   md:grid-cols-3  gap-x-40  gap-y-20 ">
+        <div className="   flex items-center justify-center   mt-4 2xl:w-4/6  2xl:ml-80  px-12   ">
+          <div className="grid  grid-cols-2    md:grid-cols-4  ">
             {" "}
             {categories_data.categories.length &&
               categories_data.categories.map((cat, index) => {
+                "         shadow-lg  shadow-gray-100";
                 return (
                   <div
                     key={index}
-                    className=" flex flex-col items-center  mt-2 p-8 hover:shadow-lg    hover:shadow-gray-100"
+                    className=" flex flex-col w-6/12 items-center  mt-2 p-8 "
                   >
                     <div className="h-8/12 w-14 py-4">
-                      <img src={cat.image} height={"auto"} width={"auto"}       alt ={"services"}/>
+                      <img
+                        src={cat.image}
+                        height={"auto"}
+                        width={"auto"}
+                        alt={"services"}
+                      />
                     </div>
-                    <p className="md:text-2xl md:font-medium  text-center  text-sm ">
+                    <p className="md:text-2xl md:font-medium  text-center  text-sm w-auto ">
                       {cat.title}
                     </p>
-                    <p className="mt-2 md:text-lg text-gray-400">{cat.desc}</p>
+                    <p className="mt-2 md:text-lg text-gray-400 ">{cat.desc}</p>
                   </div>
                 );
               })}

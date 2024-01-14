@@ -2,17 +2,16 @@ import axios from "axios";
 
 const testUrl = "http://localhost:8080/api/";
 const baseUrl = "http://localhost";
-export const postData = async(data) => {
+export const postData = async (url, data) => {
   try {
-    await  axios
-    .post(testUrl, data)
+    const response = await axios.post(testUrl + url, data);
+
     if (response.status === 200) {
       return response.data;
     } else {
       return response.data;
     }
-  }
-  catch (error) {
+  } catch (error) {
     if (error.response) {
       // The request was made and the server responded with a status code
       // that falls out of the range of 2xx
@@ -26,10 +25,7 @@ export const postData = async(data) => {
       // Something happened in setting up the request that triggered an Error
       return error.response.data;
     }
-    
   }
-
-  
 };
 
 export const getData = async (query) => {

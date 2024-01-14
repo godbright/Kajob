@@ -36,11 +36,17 @@ const Trending = () => {
   return (
     <div className="mt-4 flex   pb-20  flex-col justify-center items-center bg-slate-50 ">
       <Heading
-        title={" Trending Services"}
+        title={" Trending Jobs"}
         description={"Check out the popular services"}
-        link={"All Services"}
+        link={"Popular Jobs"}
+        route={"service"}
       />
-      {<ServiceComponent data={services_data && services_data.services} />}
+      {
+        <ServiceComponent
+          data={services_data && services_data.services}
+          isCarousel={true}
+        />
+      }
     </div>
   );
 };

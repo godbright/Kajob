@@ -24,7 +24,7 @@ const SingleImageCarousel = (props) => {
 
   return (
     <div id="Stack">
-      <div className=" flex  bg-slate-50 justify-center w-screen pb-6  ">
+      <div className=" flex  justify-center w-screen pb-6  ">
         <div className=" w-5/6 container ">
           <Carousel
             additionalTransfrom={0}

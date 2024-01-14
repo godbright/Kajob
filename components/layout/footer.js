@@ -17,7 +17,7 @@ const Footer = () => {
       FFD365
       FDFFA9 */}
       <div className="   bg-[#1F4B3F] w-screen   ">
-        <div className="py-2">
+        {/* <div className="py-2">
           <p className="font-normal my-10 text-center text-white font-mono text-4xl">
             We link you to the best Jobs <br />
             you can find
@@ -35,7 +35,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         <div class="hidden sm:block">
           <div className=" bg-white  grid grid-cols-4  pb-10 pt-10 ">
             {/* <div className="  md:mx-10  2xl:mx-56 mt-40  md:mb-40 "></div> */}
@@ -173,7 +173,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex  py-4 bg-[#1F4B3F]items-center justify-center ">
+        <div className="flex  py-4 items-center justify-center ">
           <p className="text-white font-thin ">@ 2023 All Rights Reserved</p>
         </div>
       </div>

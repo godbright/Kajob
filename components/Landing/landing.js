@@ -8,7 +8,7 @@ const Landing = () => {
   ];
   return (
     <div className="    bg-[#1F4B3F]">
-      <div className="flex md:px-16  flex-col  md:h-screen 2xl:h-5/6  md:py-80 h-fit py-60 px-10  2xl:ml-80 ">
+      <div className="flex md:px-16  flex-col  2xl:h-5/6   h-fit py-60 px-10  2xl:ml-80 ">
         <div>
           <div className="flex-col md:mt-4 items-start ">
             <p className="text-white text-4xl md:text-6xl  md:font-bold md:w-30 2xl:w-full mb-4">
